@@ -8,18 +8,26 @@
 import UIKit
 import Alamofire
 
-class ViewController: UIViewController {
+class MainVC: UIViewController {
 
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var pressureLabel: UILabel!
     @IBOutlet weak var humidityLabel: UILabel!
+    var cityId = "108410"
     override func viewDidLoad() {
         super.viewDidLoad()
         
         NotificationCenter.default.addObserver(self, selector: #selector(cityChanged), name: NSNotification.Name(rawValue: "cityVlueChnged"), object: nil)
+        getCityWeatharInfo()
         
-        let params = ["id" : "108410", "appid" : "33488afb423814df369b9bd4baeb8e3c"]
+
+    }
+    
+
+    func getCityWeatharInfo(){
+        
+        let params = ["id" : cityId, "appid" : "33488afb423814df369b9bd4baeb8e3c"]
         
         AF.request("https://api.openweathermap.org/data/2.5/weather", parameters: params, encoder: URLEncodedFormParameterEncoder.default).responseJSON { response in
             
@@ -39,12 +47,13 @@ class ViewController: UIViewController {
                 self.humidityLabel.text = "\(humidity)"
             }
         }
-      
-        
     }
+    
     @objc func cityChanged(notification:Notification ){
         if let city =  notification.userInfo?["city"] as? City{
             cityLabel.text = city.name
+            cityId = city.id
+            getCityWeatharInfo()
         }
     }
 }

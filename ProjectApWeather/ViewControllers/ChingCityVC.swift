@@ -9,15 +9,15 @@ import UIKit
 
 class ChingCityVC: UIViewController {
 
-    var cityArray = [City(name: "Riyadh"),
-                     City(name: "Dammam"),
-                     City(name: "Jeddah"),
-                     City(name: "Makkah"),
-                     City(name: "Madina El Monawara"),
-                     City(name: "Dubai"),
-                     City(name: "Abu Dhabi"),
-                     City(name: "Kuwait"),
-                     City(name: "Turkey")]
+    var cityArray = [City(name: "Riyadh", id: "108410"),
+                     City(name: "Dammam", id: "110336"),
+                     City(name: "Jeddah", id: "105343"),
+                     City(name: "Makkah", id: "104514"),
+                     City(name: "Madina El Monawara", id: "109224"),
+                     City(name: "Dubai", id: "292223"),
+                     City(name: "Abu Dhabi", id: "292968"),
+                     City(name: "Kuwait", id: "285570"),
+                     City(name: "Turkey", id: "298795")]
 
     var selectedCity: City? = nil
     
