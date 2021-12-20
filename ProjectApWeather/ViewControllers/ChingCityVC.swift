@@ -17,7 +17,20 @@ class ChingCityVC: UIViewController {
                      City(name: "Dubai", id: "292223"),
                      City(name: "Abu Dhabi", id: "292968"),
                      City(name: "Kuwait", id: "285570"),
-                     City(name: "Turkey", id: "298795")]
+                     City(name: "Turkey", id: "298795"),
+                     City(name: "London", id: "1006984"),
+                     City(name: "New York", id: "5039192"),
+                     City(name: "Seattle", id: "5809844"),
+                     City(name: "Japan", id: "1861060"),
+                     City(name: "Tokyo", id: "1850147"),
+                     City(name: "Seoul", id: "1835847"),
+                     City(name: "Gyeonggi-do", id: "1841610"),
+                     City(name: "Kwangyang", id: "1841775"),
+                     City(name: "Busan", id: "1838524"),
+                     City(name: "Russian", id: "2017370"),
+                     City(name: "Onalaska", id: "4716701"),
+                     City(name: "Paris", id: "4717560")
+    ]
 
     var selectedCity: City? = nil
     
