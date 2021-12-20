@@ -10,8 +10,7 @@ import Alamofire
 
 class MainVC: UIViewController {
 
-    @IBOutlet weak var weatharInfoLabel: UILabel!
-    @IBOutlet weak var weathsrIconImageV: UIImageView!
+
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var pressureLabel: UILabel!
