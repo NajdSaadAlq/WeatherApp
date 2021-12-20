@@ -14,6 +14,9 @@
 		A8CD24CA276CB1400004074B /* ProjectApWeather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A8CD24C8276CB1400004074B /* ProjectApWeather.xcdatamodeld */; };
 		A8CD24CC276CB1430004074B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8CD24CB276CB1430004074B /* Assets.xcassets */; };
 		A8CD24CF276CB1430004074B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8CD24CD276CB1430004074B /* LaunchScreen.storyboard */; };
+		A8F5C7F72770205100F375B8 /* FontBlaster in Frameworks */ = {isa = PBXBuildFile; productRef = A8F5C7F62770205100F375B8 /* FontBlaster */; };
+		A8F5C7FD27703FA800F375B8 /* ChingCityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F5C7FC27703FA800F375B8 /* ChingCityVC.swift */; };
+		A8F5C7FF2770422900F375B8 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F5C7FE2770422900F375B8 /* City.swift */; };
 		BD065FF3DBDF9BC6FEAC79EF /* Pods_ProjectApWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A74CD3C63FCEDBC4474D291 /* Pods_ProjectApWeather.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +32,8 @@
 		A8CD24CB276CB1430004074B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8CD24CE276CB1430004074B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8CD24D0276CB1430004074B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8F5C7FC27703FA800F375B8 /* ChingCityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChingCityVC.swift; sourceTree = "<group>"; };
+		A8F5C7FE2770422900F375B8 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		CE831C2CA6006305E7F89BB1 /* Pods-ProjectApWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectApWeather.release.xcconfig"; path = "Target Support Files/Pods-ProjectApWeather/Pods-ProjectApWeather.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -38,6 +43,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD065FF3DBDF9BC6FEAC79EF /* Pods_ProjectApWeather.framework in Frameworks */,
+				A8F5C7F72770205100F375B8 /* FontBlaster in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,7 +56,6 @@
 				63922091F49B073F66B8D688 /* Pods-ProjectApWeather.debug.xcconfig */,
 				CE831C2CA6006305E7F89BB1 /* Pods-ProjectApWeather.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -83,16 +88,50 @@
 		A8CD24BE276CB1400004074B /* ProjectApWeather */ = {
 			isa = PBXGroup;
 			children = (
-				A8CD24BF276CB1400004074B /* AppDelegate.swift */,
-				A8CD24C1276CB1400004074B /* SceneDelegate.swift */,
-				A8CD24C3276CB1400004074B /* ViewController.swift */,
-				A8CD24C5276CB1400004074B /* Main.storyboard */,
-				A8CD24CB276CB1430004074B /* Assets.xcassets */,
-				A8CD24CD276CB1430004074B /* LaunchScreen.storyboard */,
+				A8F5C7FB2770298C00F375B8 /* Storag */,
+				A8F5C7FA2770296500F375B8 /* ViewControllers */,
+				A8F5C7F92770290800F375B8 /* View */,
+				A8F5C7F8277028FA00F375B8 /* Model */,
 				A8CD24D0276CB1430004074B /* Info.plist */,
-				A8CD24C8276CB1400004074B /* ProjectApWeather.xcdatamodeld */,
 			);
 			path = ProjectApWeather;
+			sourceTree = "<group>";
+		};
+		A8F5C7F8277028FA00F375B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A8F5C7FE2770422900F375B8 /* City.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A8F5C7F92770290800F375B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A8CD24C5276CB1400004074B /* Main.storyboard */,
+				A8CD24CD276CB1430004074B /* LaunchScreen.storyboard */,
+				A8CD24CB276CB1430004074B /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A8F5C7FA2770296500F375B8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A8CD24C3276CB1400004074B /* ViewController.swift */,
+				A8F5C7FC27703FA800F375B8 /* ChingCityVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A8F5C7FB2770298C00F375B8 /* Storag */ = {
+			isa = PBXGroup;
+			children = (
+				A8CD24C1276CB1400004074B /* SceneDelegate.swift */,
+				A8CD24BF276CB1400004074B /* AppDelegate.swift */,
+				A8CD24C8276CB1400004074B /* ProjectApWeather.xcdatamodeld */,
+			);
+			path = Storag;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,6 +152,9 @@
 			dependencies = (
 			);
 			name = ProjectApWeather;
+			packageProductDependencies = (
+				A8F5C7F62770205100F375B8 /* FontBlaster */,
+			);
 			productName = ProjectApWeather;
 			productReference = A8CD24BC276CB1400004074B /* ProjectApWeather.app */;
 			productType = "com.apple.product-type.application";
@@ -141,6 +183,9 @@
 				Base,
 			);
 			mainGroup = A8CD24B3276CB1400004074B;
+			packageReferences = (
+				A8F5C7F52770205000F375B8 /* XCRemoteSwiftPackageReference "FontBlaster" */,
+			);
 			productRefGroup = A8CD24BD276CB1400004074B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -210,7 +255,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8F5C7FD27703FA800F375B8 /* ChingCityVC.swift in Sources */,
 				A8CD24C4276CB1400004074B /* ViewController.swift in Sources */,
+				A8F5C7FF2770422900F375B8 /* City.swift in Sources */,
 				A8CD24CA276CB1400004074B /* ProjectApWeather.xcdatamodeld in Sources */,
 				A8CD24C0276CB1400004074B /* AppDelegate.swift in Sources */,
 				A8CD24C2276CB1400004074B /* SceneDelegate.swift in Sources */,
@@ -435,6 +482,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A8F5C7F52770205000F375B8 /* XCRemoteSwiftPackageReference "FontBlaster" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ArtSabintsev/FontBlaster.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A8F5C7F62770205100F375B8 /* FontBlaster */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8F5C7F52770205000F375B8 /* XCRemoteSwiftPackageReference "FontBlaster" */;
+			productName = FontBlaster;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		A8CD24C8276CB1400004074B /* ProjectApWeather.xcdatamodeld */ = {

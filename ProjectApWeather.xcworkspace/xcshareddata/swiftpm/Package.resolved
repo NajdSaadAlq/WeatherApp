@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "FontBlaster",
+        "repositoryURL": "https://github.com/ArtSabintsev/FontBlaster.git",
+        "state": {
+          "branch": null,
+          "revision": "a7c05d963f1a90ed558c3f8c7a663c097498a27d",
+          "version": "5.2.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
