@@ -9,27 +9,27 @@ import UIKit
 
 class ChingCityVC: UIViewController {
 
-    var cityArray = [City(name: "Dammam", id: "110336"),
-                     City(name: "Riyadh", id: "108410"),
-                     City(name: "Jeddah", id: "105343"),
-                     City(name: "Makkah", id: "104514"),
-                     City(name: "Al Madīnah al Munawwarah", id: "109224"),
-                     City(name: "Dubai", id: "292223"),
-                     City(name: "Abu Dhabi", id: "292968"),
-                     City(name: "Kuwait", id: "285570"),
-                     City(name: "Turkey", id: "298795"),
-                     City(name: "London", id: "1006984"),
-                     City(name: "New York", id: "5039192"),
-                     City(name: "Seattle", id: "5809844"),
-                     City(name: "Japan", id: "1861060"),
-                     City(name: "Tokyo", id: "1850147"),
-                     City(name: "Seoul", id: "1835847"),
-                     City(name: "Gyeonggi-do", id: "1841610"),
-                     City(name: "Kwangyang", id: "1841775"),
-                     City(name: "Busan", id: "1838524"),
-                     City(name: "Russian", id: "2017370"),
-                     City(name: "Onalaska", id: "4716701"),
-                     City(name: "Paris", id: "4717560")
+    var cityArray = [City(name: "الدمام", id: "110336"),
+                     City(name: "الرياض", id: "108410"),
+                     City(name: "جدة", id: "105343"),
+                     City(name: "مكة المكرمة", id: "104514"),
+                     City(name: "المدينة المنورة", id: "109224"),
+                     City(name: "دبي", id: "292223"),
+                     City(name: "أبوظبي", id: "292968"),
+                     City(name: "الكويت", id: "285570"),
+                     City(name: "تركيا", id: "298795"),
+                     City(name: "لندن", id: "1006984"),
+                     City(name: "نيويورك", id: "5039192"),
+                     City(name: "سياتل", id: "5809844"),
+                     City(name: "اليابان", id: "1861060"),
+                     City(name: "طوكيو", id: "1850147"),
+                     City(name: "الاردن", id: "248816"),
+                     City(name: "تونس", id: "2464461"),
+                     City(name: "عمان", id: "286963"),
+                     City(name: "قطر", id: "289688"),
+                     City(name: "روسيا", id: "2017370"),
+                     City(name: "المغرب", id: "2542007"),
+                     City(name: "باريس", id: "4717560")
     ]
 
     var selectedCity: City? = nil

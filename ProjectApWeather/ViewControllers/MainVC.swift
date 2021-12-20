@@ -7,6 +7,7 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class MainVC: UIViewController {
 
@@ -38,7 +39,7 @@ class MainVC: UIViewController {
         loderPressureAV.startAnimating()
         loderhumidityAV.startAnimating()
         
-        let params = ["id" : cityId, "lang" : "en" , "appid" : "33488afb423814df369b9bd4baeb8e3c"]
+        let params = ["id" : cityId, "lang" : "ar" , "appid" : "33488afb423814df369b9bd4baeb8e3c"]
         
         AF.request("https://api.openweathermap.org/data/2.5/weather", parameters: params, encoder: URLEncodedFormParameterEncoder.default).responseJSON { response in
             
