@@ -9,11 +9,11 @@ import UIKit
 
 class ChingCityVC: UIViewController {
 
-    var cityArray = [City(name: "Riyadh", id: "108410"),
-                     City(name: "Dammam", id: "110336"),
+    var cityArray = [City(name: "Dammam", id: "110336"),
+                     City(name: "Riyadh", id: "108410"),
                      City(name: "Jeddah", id: "105343"),
                      City(name: "Makkah", id: "104514"),
-                     City(name: "Madina El Monawara", id: "109224"),
+                     City(name: "Al Madīnah al Munawwarah", id: "109224"),
                      City(name: "Dubai", id: "292223"),
                      City(name: "Abu Dhabi", id: "292968"),
                      City(name: "Kuwait", id: "285570"),
