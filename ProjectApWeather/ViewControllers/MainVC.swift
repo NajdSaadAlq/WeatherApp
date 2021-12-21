@@ -12,6 +12,7 @@ import SwiftyJSON
 class MainVC: UIViewController {
 
 
+    @IBOutlet weak var cloudIconImageView: UIImageView!
     @IBOutlet weak var weathardescriptionLabel: UILabel!
     @IBOutlet weak var weatharMinLabel: UILabel!
     @IBOutlet weak var bagroindView: UIView!
@@ -82,324 +83,105 @@ class MainVC: UIViewController {
                 
                 switch iconName {
                 case "01d" ://clear sky sun
-                    self.bagroindView.backgroundColor = UIColor(#colorLiteral(red:      0.8740803599, green: 0.6124646068, blue: 0.6009569764, alpha: 1))
-                    self.tempTextLabel.textColor = UIColor.black
-                    self.tempLabel.textColor = UIColor.black
-                    self.iconTempImageView.tintColor = UIColor.black
-                    self.lodertempAV.backgroundColor = UIColor.black
-                    
-                    self.pressureTextLabel.textColor = UIColor.black
-                    self.pressureLabel.textColor = UIColor.black
-                    self.iconPressureImageView.tintColor = UIColor.black
-                    self.loderPressureAV.backgroundColor = UIColor.black
-                    
-                    self.humidityTextLabel.textColor = UIColor.black
-                    self.humidityLabel.textColor = UIColor.black
-                    self.iconHumidityImageView.tintColor = UIColor.black
-                    self.loderhumidityAV.backgroundColor = UIColor.black
-                    
+                    self.cloudIconImageView.image = #imageLiteral(resourceName: "Sunny.png")
+                    self.dayFnucshin()
                 case "01n" ://clear sky night
-                    self.bagroindView.backgroundColor =  UIColor( #colorLiteral(red: 0.09109144658, green: 0.1007531509, blue: 0.3106760383, alpha: 1))
-                    self.tempTextLabel.textColor = UIColor.white
-                    self.tempLabel.textColor = UIColor.white
-                    self.iconTempImageView.tintColor = UIColor.white
-                    self.lodertempAV.backgroundColor = UIColor.white
-                    
-                    self.pressureTextLabel.textColor = UIColor.white
-                    self.pressureLabel.textColor = UIColor.white
-                    self.iconPressureImageView.tintColor = UIColor.white
-                    self.loderPressureAV.backgroundColor = UIColor.white
-                    
-                    self.humidityTextLabel.textColor = UIColor.white
-                    self.humidityLabel.textColor = UIColor.white
-                    self.iconHumidityImageView.tintColor = UIColor.white
-                    self.loderhumidityAV.backgroundColor = UIColor.white
-                               
-                   
+                    self.cloudIconImageView.image = #imageLiteral(resourceName: "Clear.png")
+                    self.nightFnucshin()
                 case "02d"://few clouds sun
-                    self.bagroindView.backgroundColor = UIColor(#colorLiteral(red: 0.8740803599, green: 0.6124646068, blue: 0.6009569764, alpha: 1))
-                    self.tempTextLabel.textColor = UIColor.black
-                    self.tempLabel.textColor = UIColor.black
-                    self.iconTempImageView.tintColor = UIColor.black
-                    self.lodertempAV.backgroundColor = UIColor.black
-                    
-                    self.pressureTextLabel.textColor = UIColor.black
-                    self.pressureLabel.textColor = UIColor.black
-                    self.iconPressureImageView.tintColor = UIColor.black
-                    self.loderPressureAV.backgroundColor = UIColor.black
-                    
-                    self.humidityTextLabel.textColor = UIColor.black
-                    self.humidityLabel.textColor = UIColor.black
-                    self.iconHumidityImageView.tintColor = UIColor.black
-                    self.loderhumidityAV.backgroundColor = UIColor.black
-                   
+                    self.cloudIconImageView.image = #imageLiteral(resourceName: "PartlyCloudyDay.png")
+                    self.dayFnucshin()
                 case "02n"://few clouds night
-                    self.bagroindView.backgroundColor =  UIColor( #colorLiteral(red: 0.09109144658, green: 0.1007531509, blue: 0.3106760383, alpha: 1))
-                    self.tempTextLabel.textColor = UIColor.white
-                    self.tempLabel.textColor = UIColor.white
-                    self.iconTempImageView.tintColor = UIColor.white
-                    self.lodertempAV.backgroundColor = UIColor.white
-                    
-                    self.pressureTextLabel.textColor = UIColor.white
-                    self.pressureLabel.textColor = UIColor.white
-                    self.iconPressureImageView.tintColor = UIColor.white
-                    self.loderPressureAV.backgroundColor = UIColor.white
-                    
-                    self.humidityTextLabel.textColor = UIColor.white
-                    self.humidityLabel.textColor = UIColor.white
-                    self.iconHumidityImageView.tintColor = UIColor.white
-                    self.loderhumidityAV.backgroundColor = UIColor.white
-                    
+                    self.cloudIconImageView.image = #imageLiteral(resourceName: "PartlyCloudyNight.png")
+                    self.nightFnucshin()
                 case "03d"://scattered clouds sun
-                    self.bagroindView.backgroundColor = UIColor(#colorLiteral(red: 0.8740803599, green: 0.6124646068, blue: 0.6009569764, alpha: 1))
-                    self.tempTextLabel.textColor = UIColor.black
-                    self.tempLabel.textColor = UIColor.black
-                    self.iconTempImageView.tintColor = UIColor.black
-                    self.lodertempAV.backgroundColor = UIColor.black
-                    
-                    self.pressureTextLabel.textColor = UIColor.black
-                    self.pressureLabel.textColor = UIColor.black
-                    self.iconPressureImageView.tintColor = UIColor.black
-                    self.loderPressureAV.backgroundColor = UIColor.black
-                    
-                    self.humidityTextLabel.textColor = UIColor.black
-                    self.humidityLabel.textColor = UIColor.black
-                    self.iconHumidityImageView.tintColor = UIColor.black
-                    self.loderhumidityAV.backgroundColor = UIColor.black
-                   
+                    self.cloudIconImageView.image = #imageLiteral(resourceName: "PartlyCloudyDay.png")
+                    self.dayFnucshin()
                 case "03n"://scattered clouds night
-                    self.bagroindView.backgroundColor =  UIColor( #colorLiteral(red: 0.09109144658, green: 0.1007531509, blue: 0.3106760383, alpha: 1))
-                    self.tempTextLabel.textColor = UIColor.white
-                    self.tempLabel.textColor = UIColor.white
-                    self.iconTempImageView.tintColor = UIColor.white
-                    self.lodertempAV.backgroundColor = UIColor.white
-                    
-                    self.pressureTextLabel.textColor = UIColor.white
-                    self.pressureLabel.textColor = UIColor.white
-                    self.iconPressureImageView.tintColor = UIColor.white
-                    self.loderPressureAV.backgroundColor = UIColor.white
-                    
-                    self.humidityTextLabel.textColor = UIColor.white
-                    self.humidityLabel.textColor = UIColor.white
-                    self.iconHumidityImageView.tintColor = UIColor.white
-                    self.loderhumidityAV.backgroundColor = UIColor.white
-                    
+                    self.cloudIconImageView.image = #imageLiteral(resourceName: "PartlyCloudyNight.png")
+                    self.nightFnucshin()
                 case "04d"://broken clouds sun
-                    self.bagroindView.backgroundColor = UIColor(#colorLiteral(red: 0.8740803599, green: 0.6124646068, blue: 0.6009569764, alpha: 1))
-                    self.tempTextLabel.textColor = UIColor.black
-                    self.tempLabel.textColor = UIColor.black
-                    self.iconTempImageView.tintColor = UIColor.black
-                    self.lodertempAV.backgroundColor = UIColor.black
-                    
-                    self.pressureTextLabel.textColor = UIColor.black
-                    self.pressureLabel.textColor = UIColor.black
-                    self.iconPressureImageView.tintColor = UIColor.black
-                    self.loderPressureAV.backgroundColor = UIColor.black
-                    
-                    self.humidityTextLabel.textColor = UIColor.black
-                    self.humidityLabel.textColor = UIColor.black
-                    self.iconHumidityImageView.tintColor = UIColor.black
-                    self.loderhumidityAV.backgroundColor = UIColor.black
-                    
+                    self.cloudIconImageView.image = #imageLiteral(resourceName: "Cloudy.png")
+                    self.dayFnucshin()
                 case "04n"://broken clouds night
-                    self.bagroindView.backgroundColor =  UIColor( #colorLiteral(red: 0.09109144658, green: 0.1007531509, blue: 0.3106760383, alpha: 1))
-                    self.tempTextLabel.textColor = UIColor.white
-                    self.tempLabel.textColor = UIColor.white
-                    self.iconTempImageView.tintColor = UIColor.white
-                    self.lodertempAV.backgroundColor = UIColor.white
-                    
-                    self.pressureTextLabel.textColor = UIColor.white
-                    self.pressureLabel.textColor = UIColor.white
-                    self.iconPressureImageView.tintColor = UIColor.white
-                    self.loderPressureAV.backgroundColor = UIColor.white
-                    
-                    self.humidityTextLabel.textColor = UIColor.white
-                    self.humidityLabel.textColor = UIColor.white
-                    self.iconHumidityImageView.tintColor = UIColor.white
-                    self.loderhumidityAV.backgroundColor = UIColor.white
-                 
-                    
+                    self.cloudIconImageView.image = #imageLiteral(resourceName: "Overcast.png")
+                    self.nightFnucshin()
                 case "09d"://shower rain sun
-                    self.bagroindView.backgroundColor = UIColor(#colorLiteral(red: 0.8740803599, green: 0.6124646068, blue: 0.6009569764, alpha: 1))
-                    self.tempTextLabel.textColor = UIColor.black
-                    self.tempLabel.textColor = UIColor.black
-                    self.iconTempImageView.tintColor = UIColor.black
-                    self.lodertempAV.backgroundColor = UIColor.black
-                    
-                    self.pressureTextLabel.textColor = UIColor.black
-                    self.pressureLabel.textColor = UIColor.black
-                    self.iconPressureImageView.tintColor = UIColor.black
-                    self.loderPressureAV.backgroundColor = UIColor.black
-                    
-                    self.humidityTextLabel.textColor = UIColor.black
-                    self.humidityLabel.textColor = UIColor.black
-                    self.iconHumidityImageView.tintColor = UIColor.black
-                    self.loderhumidityAV.backgroundColor = UIColor.black
-                    
-                    
+                    self.cloudIconImageView.image = #imageLiteral(resourceName: "HeavyRainSwrsDay.png")
+                    self.dayFnucshin()
                 case "09n"://shower rain night
-                    self.bagroindView.backgroundColor =  UIColor( #colorLiteral(red: 0.09109144658, green: 0.1007531509, blue: 0.3106760383, alpha: 1))
-                    self.tempTextLabel.textColor = UIColor.white
-                    self.tempLabel.textColor = UIColor.white
-                    self.iconTempImageView.tintColor = UIColor.white
-                    self.lodertempAV.backgroundColor = UIColor.white
-                    
-                    self.pressureTextLabel.textColor = UIColor.white
-                    self.pressureLabel.textColor = UIColor.white
-                    self.iconPressureImageView.tintColor = UIColor.white
-                    self.loderPressureAV.backgroundColor = UIColor.white
-                    
-                    self.humidityTextLabel.textColor = UIColor.white
-                    self.humidityLabel.textColor = UIColor.white
-                    self.iconHumidityImageView.tintColor = UIColor.white
-                    self.loderhumidityAV.backgroundColor = UIColor.white
-                    
+                    self.cloudIconImageView.image = #imageLiteral(resourceName: "HeavyRainSwrsNight.png")
+                    self.nightFnucshin()
                 case "10d"://rain sun
-                    self.bagroindView.backgroundColor = UIColor(#colorLiteral(red: 0.8740803599, green: 0.6124646068, blue: 0.6009569764, alpha: 1))
-                    self.tempTextLabel.textColor = UIColor.black
-                    self.tempLabel.textColor = UIColor.black
-                    self.iconTempImageView.tintColor = UIColor.black
-                    self.lodertempAV.backgroundColor = UIColor.black
-                    
-                    self.pressureTextLabel.textColor = UIColor.black
-                    self.pressureLabel.textColor = UIColor.black
-                    self.iconPressureImageView.tintColor = UIColor.black
-                    self.loderPressureAV.backgroundColor = UIColor.black
-                    
-                    self.humidityTextLabel.textColor = UIColor.black
-                    self.humidityLabel.textColor = UIColor.black
-                    self.iconHumidityImageView.tintColor = UIColor.black
-                    self.loderhumidityAV.backgroundColor = UIColor.black
-                    
+                    self.cloudIconImageView.image = #imageLiteral(resourceName: "IsoRainSwrsDay.png")
+                    self.dayFnucshin()
                 case "10n"://rain night
-                    self.bagroindView.backgroundColor =  UIColor( #colorLiteral(red: 0.09109144658, green: 0.1007531509, blue: 0.3106760383, alpha: 1))
-                    self.tempTextLabel.textColor = UIColor.white
-                    self.tempLabel.textColor = UIColor.white
-                    self.iconTempImageView.tintColor = UIColor.white
-                    self.lodertempAV.backgroundColor = UIColor.white
-                    
-                    self.pressureTextLabel.textColor = UIColor.white
-                    self.pressureLabel.textColor = UIColor.white
-                    self.iconPressureImageView.tintColor = UIColor.white
-                    self.loderPressureAV.backgroundColor = UIColor.white
-                    
-                    self.humidityTextLabel.textColor = UIColor.white
-                    self.humidityLabel.textColor = UIColor.white
-                    self.iconHumidityImageView.tintColor = UIColor.white
-                    self.loderhumidityAV.backgroundColor = UIColor.white
-                    
+                    self.cloudIconImageView.image = #imageLiteral(resourceName: "IsoRainSwrsNight.png")
+                    self.nightFnucshin()
                 case "11d"://thunderstorm sun
-                    self.bagroindView.backgroundColor = UIColor(#colorLiteral(red: 0.8740803599, green: 0.6124646068, blue: 0.6009569764, alpha: 1))
-                    self.tempTextLabel.textColor = UIColor.black
-                    self.tempLabel.textColor = UIColor.black
-                    self.iconTempImageView.tintColor = UIColor.black
-                    self.lodertempAV.backgroundColor = UIColor.black
-                    
-                    self.pressureTextLabel.textColor = UIColor.black
-                    self.pressureLabel.textColor = UIColor.black
-                    self.iconPressureImageView.tintColor = UIColor.black
-                    self.loderPressureAV.backgroundColor = UIColor.black
-                    
-                    self.humidityTextLabel.textColor = UIColor.black
-                    self.humidityLabel.textColor = UIColor.black
-                    self.iconHumidityImageView.tintColor = UIColor.black
-                    self.loderhumidityAV.backgroundColor = UIColor.black
-                    
+                    self.cloudIconImageView.image = #imageLiteral(resourceName: "PartCloudRainThunderDay.png")
+                    self.dayFnucshin()
                 case "11n"://thunderstorm night
-                    self.bagroindView.backgroundColor =  UIColor( #colorLiteral(red: 0.09109144658, green: 0.1007531509, blue: 0.3106760383, alpha: 1))
-                    self.tempTextLabel.textColor = UIColor.white
-                    self.tempLabel.textColor = UIColor.white
-                    self.iconTempImageView.tintColor = UIColor.white
-                    self.lodertempAV.backgroundColor = UIColor.white
-                    
-                    self.pressureTextLabel.textColor = UIColor.white
-                    self.pressureLabel.textColor = UIColor.white
-                    self.iconPressureImageView.tintColor = UIColor.white
-                    self.loderPressureAV.backgroundColor = UIColor.white
-                    
-                    self.humidityTextLabel.textColor = UIColor.white
-                    self.humidityLabel.textColor = UIColor.white
-                    self.iconHumidityImageView.tintColor = UIColor.white
-                    self.loderhumidityAV.backgroundColor = UIColor.white
-                    
+                    self.cloudIconImageView.image = #imageLiteral(resourceName: "PartCloudRainThunderNight.png")
+                    self.nightFnucshin()
                 case "13d"://snow sun
-                    self.bagroindView.backgroundColor = UIColor(#colorLiteral(red: 0.8740803599, green: 0.6124646068, blue: 0.6009569764, alpha: 1))
-                    self.tempTextLabel.textColor = UIColor.black
-                    self.tempLabel.textColor = UIColor.black
-                    self.iconTempImageView.tintColor = UIColor.black
-                    self.lodertempAV.backgroundColor = UIColor.black
-                    
-                    self.pressureTextLabel.textColor = UIColor.black
-                    self.pressureLabel.textColor = UIColor.black
-                    self.iconPressureImageView.tintColor = UIColor.black
-                    self.loderPressureAV.backgroundColor = UIColor.black
-                    
-                    self.humidityTextLabel.textColor = UIColor.black
-                    self.humidityLabel.textColor = UIColor.black
-                    self.iconHumidityImageView.tintColor = UIColor.black
-                    self.loderhumidityAV.backgroundColor = UIColor.black
-                    
+                    self.cloudIconImageView.image = #imageLiteral(resourceName: "IsoSnowSwrsDay.png")
+                    self.dayFnucshin()
                 case "13n"://snow night
-                    self.bagroindView.backgroundColor =  UIColor( #colorLiteral(red: 0.09109144658, green: 0.1007531509, blue: 0.3106760383, alpha: 1))
-                    self.tempTextLabel.textColor = UIColor.white
-                    self.tempLabel.textColor = UIColor.white
-                    self.iconTempImageView.tintColor = UIColor.white
-                    self.lodertempAV.backgroundColor = UIColor.white
-                    
-                    self.pressureTextLabel.textColor = UIColor.white
-                    self.pressureLabel.textColor = UIColor.white
-                    self.iconPressureImageView.tintColor = UIColor.white
-                    self.loderPressureAV.backgroundColor = UIColor.white
-                    
-                    self.humidityTextLabel.textColor = UIColor.white
-                    self.humidityLabel.textColor = UIColor.white
-                    self.iconHumidityImageView.tintColor = UIColor.white
-                    self.loderhumidityAV.backgroundColor = UIColor.white
-                    
+                    self.cloudIconImageView.image = #imageLiteral(resourceName: "IsoSnowSwrsNight.png")
+                    self.nightFnucshin()
                 case "50d"://mist sun
-                    self.bagroindView.backgroundColor = UIColor(#colorLiteral(red: 0.8740803599, green: 0.6124646068, blue: 0.6009569764, alpha: 1))
-                    self.tempTextLabel.textColor = UIColor.black
-                    self.tempLabel.textColor = UIColor.black
-                    self.iconTempImageView.tintColor = UIColor.black
-                    self.lodertempAV.backgroundColor = UIColor.black
-                    
-                    self.pressureTextLabel.textColor = UIColor.black
-                    self.pressureLabel.textColor = UIColor.black
-                    self.iconPressureImageView.tintColor = UIColor.black
-                    self.loderPressureAV.backgroundColor = UIColor.black
-                    
-                    self.humidityTextLabel.textColor = UIColor.black
-                    self.humidityLabel.textColor = UIColor.black
-                    self.iconHumidityImageView.tintColor = UIColor.black
-                    self.loderhumidityAV.backgroundColor = UIColor.black
-                    
+                    self.cloudIconImageView.image = #imageLiteral(resourceName: "Mist.png")
+                    self.dayFnucshin()
                 case "50n"://mist night
-                    self.bagroindView.backgroundColor =  UIColor( #colorLiteral(red: 0.09109144658, green: 0.1007531509, blue: 0.3106760383, alpha: 1))
-                    self.tempTextLabel.textColor = UIColor.white
-                    self.tempLabel.textColor = UIColor.white
-                    self.iconTempImageView.tintColor = UIColor.white
-                    self.lodertempAV.backgroundColor = UIColor.white
-                    
-                    self.pressureTextLabel.textColor = UIColor.white
-                    self.pressureLabel.textColor = UIColor.white
-                    self.iconPressureImageView.tintColor = UIColor.white
-                    self.loderPressureAV.backgroundColor = UIColor.white
-                    
-                    self.humidityTextLabel.textColor = UIColor.white
-                    self.humidityLabel.textColor = UIColor.white
-                    self.iconHumidityImageView.tintColor = UIColor.white
-                    self.loderhumidityAV.backgroundColor = UIColor.white
-                    
-                    
+                    self.cloudIconImageView.image = #imageLiteral(resourceName: "Mist.png")
+                    self.nightFnucshin()
                 default: break}
-                
-            }
-            
-   
         }
+        }
+        }
+    
+    
+    func dayFnucshin(){
+        
+        bagroindView.backgroundColor = UIColor(#colorLiteral(red: 0.699916482, green: 0.7820982933, blue: 0.8692715764, alpha: 1))
+        tempTextLabel.textColor = UIColor.black
+        tempLabel.textColor = UIColor.black
+        iconTempImageView.tintColor = UIColor.black
+        lodertempAV.tintColor = UIColor.black
+        
+        pressureTextLabel.textColor = UIColor.black
+        pressureLabel.textColor = UIColor.black
+        iconPressureImageView.tintColor = UIColor.black
+        loderPressureAV.tintColor = UIColor.black
+        
+        humidityTextLabel.textColor = UIColor.black
+        humidityLabel.textColor = UIColor.black
+        iconHumidityImageView.tintColor = UIColor.black
+        loderhumidityAV.tintColor = UIColor.black
+        
         
     }
     
+    func nightFnucshin(){
+        
+        bagroindView.backgroundColor =  UIColor( #colorLiteral(red: 0.09109144658, green: 0.1007531509, blue: 0.3106760383, alpha: 1))
+        buttonBagroind.tintColor = UIColor.blue
+        tempTextLabel.textColor = UIColor.white
+        tempLabel.textColor = UIColor.white
+        iconTempImageView.tintColor = UIColor.white
+        lodertempAV.tintColor = UIColor.white
+        
+        pressureTextLabel.textColor = UIColor.white
+        pressureLabel.textColor = UIColor.white
+        iconPressureImageView.tintColor = UIColor.white
+        loderPressureAV.tintColor = UIColor.white
+        
+        humidityTextLabel.textColor = UIColor.white
+        humidityLabel.textColor = UIColor.white
+        iconHumidityImageView.tintColor = UIColor.white
+        loderhumidityAV.tintColor = UIColor.white
+    }
     @objc func cityChanged(notification:Notification ){
         if let city =  notification.userInfo?["city"] as? City{
            // cityLabel.text = city.name
